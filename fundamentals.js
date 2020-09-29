@@ -10,6 +10,8 @@ const aCar = {
         CC: 1.8
     },
 
+    features : ['Parking assist', 'Alarm', 'Tow-bar'],
+
     registration : {year: '201',
     county: 'WD',
     number: '1058'}
@@ -42,3 +44,20 @@ console.log("It is a " +
         " interior."
 )
 console.log('First owner : ' + aCar.previous_owners[0].name+ "-" +aCar.previous_owners[0].address)
+
+for (let i = 0 ; i < aCar.features.length ; i += 1) {
+    console.log(aCar.features[i]) ;
+} 
+//console.log(aCar.features.length);
+//console.log(aCar.previous_owners.length);
+
+//show the previous_owners name（array）
+for (let j = 0 ; j < aCar.previous_owners.length; j += 1){
+    console.log(aCar.previous_owners[j].name);
+}
+p = 'make';
+console.log(aCar.type[p]);
+console.log(aCar.previous_owners.length);
+for (let p in aCar.type)  {
+    console.log(p.toUpperCase() + ' = ' + aCar.type[p] ) ;
+}
